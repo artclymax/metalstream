@@ -1,0 +1,11 @@
+@font-face {
+	font-family: RobotoFlex;
+	font-display: swap;
+	src: url("fonts/RobotoFlex-VariableFont.eot");
+	src:
+		url("fonts/RobotoFlex-VariableFont.eot?#iefix") format("embedded-opentype"),
+		url("fonts/RobotoFlex-VariableFont.woff2") format("woff2"),
+		url("fonts/RobotoFlex-VariableFont.woff") format("woff"),
+		url("fonts/RobotoFlex-VariableFont.ttf") format("truetype");
+	font-style: normal;
+}

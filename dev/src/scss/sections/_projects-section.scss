@@ -1,0 +1,103 @@
+@use "@/scss/tools" as *;
+
+.projects-section {
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+	}
+
+	&__list {
+		--min: 400px;
+		row-gap: adapt(56, 24);
+
+		@include media($tablet) {
+			--min: 340px;
+		}
+	}
+
+	&__item {
+	}
+
+	&__btn {
+		align-self: center;
+	}
+}
+
+.project-card {
+	&__link {
+		text-decoration: none;
+		color: inherit;
+
+		@include hover {
+			.project-card__image-box img {
+				transform: scale(1.05);
+			}
+		}
+	}
+	&__image-box {
+		height: adapt(366, 210);
+		overflow: hidden;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		img {
+			transition: all 0.3s;
+		}
+	}
+
+	&__title {
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__box {
+		display: flex;
+		gap: 12px;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__item {
+		padding: 16px;
+		border-radius: 4px;
+		border: 1px solid var(--color-gray-light);
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		flex: 1;
+	}
+
+	&__city {
+	}
+
+	&__subtitle {
+		@include reset;
+		font-weight: 400;
+		font-size: 1rem;
+	}
+
+	&__text {
+		@include reset;
+		font-size: rem(18);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__time {
+	}
+
+	&__descr-box {
+	}
+}

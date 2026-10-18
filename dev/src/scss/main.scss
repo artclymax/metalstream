@@ -1,0 +1,88 @@
+@use "tools/constants" as *;
+@use "tools/functions" as *;
+@use "tools/mixins" as *;
+
+@use "base/normalize";
+////@use "../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css";
+////@use "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+////@use "base/fonts";
+@use "base/vars";
+@use "base/resets";
+@use "base/global";
+@use "base/utils";
+////@use "base/_components.scss";
+
+@use "components/_btn.scss";
+@use "components/_icon.scss";
+@use "components/_typography.scss";
+@use "components/_grid.scss";
+@use "components/_header-menu.scss";
+@use "components/_form.scss";
+//@use "components/_cf-select.scss";
+@use "components/_running-line.scss";
+@use "components/_scroll-to-top.scss";
+@use "components/_modal.scss";
+@use "components/_cookie-banner.scss";
+@use "components/_navxt_breadcrumbs.scss";
+@use "components/_wp-block.scss";
+@use "components/_pagination.scss";
+@use "components/_hero-404.scss";
+//@use "components/_table.scss";
+//@use "components/_footer-menu.scss";
+//@use "components/_form-input.scss";
+//@use "components/_phone-box.scss";
+//@use "components/_swiper-components.scss";
+
+// SECTIONS
+@use "sections/_header.scss";
+@use "sections/_contacts-box.scss";
+@use "sections/_hero.scss";
+@use "sections/_services.scss";
+@use "sections/_benefits.scss";
+@use "sections/_gallery.scss";
+@use "sections/_certificates.scss";
+@use "sections/_partners.scss";
+@use "sections/_form-section.scss";
+@use "sections/_footer.scss";
+
+@use "sections/_hero-page.scss";
+@use "sections/_services-products.scss";
+@use "sections/_projects-section.scss";
+@use "sections/_about.scss";
+@use "sections/_contacts-section.scss";
+
+@use "sections/_qoute.scss";
+@use "sections/_directions.scss";
+@use "sections/_products.scss";
+@use "sections/_add-products.scss";
+@use "sections/_reviews.scss";
+
+//figure.wp-block-gallery-is-layout-flex {
+//	gap: 10px !important;
+//	& > * {
+//		flex: 1;
+//	}
+//	@include media($mobile-sm) {
+//		flex-direction: column;
+//		& > * {
+//			flex: 1 1 100%;
+//			width: 100% !important;
+//		}
+//	}
+//}
+//.wp-block-image {
+//	img {
+//		width: 100%;
+//	}
+//}
+@media (max-width: 768px) {
+	.footer__contacts-box {
+		flex-direction: column;
+	}
+}
+#wpadminbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}

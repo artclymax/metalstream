@@ -1,0 +1,43 @@
+@use "@/scss/tools" as *;
+
+.benefits {
+	background: var(--color-dark-2);
+	color: var(--color-white);
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__list {
+		gap: adapt(44, 24) 24px; 
+	}
+
+	&__item {
+	}
+}
+
+.benefits-card {
+	&__icon {
+		height: 56px;
+		width: 56px;
+		&:not(:last-child) {
+			margin-bottom: adapt(24, 14);
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	&__title {
+		max-width: 344px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__descr-box {
+	}
+}

@@ -1,0 +1,79 @@
+@use "@/scss/tools" as *;
+
+.gallery {
+	&__container {
+	}
+
+	&__header {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+	}
+
+	&__nav {
+		display: flex;
+		gap: 24px;
+
+		@include media($mobile) {
+			display: none;
+		}
+	}
+}
+
+.gallery-swiper {
+	&__wrapper {
+		&:not(:last-child) {
+			margin-bottom: adapt(56, 24);
+		}
+	}
+
+	&__pagination {
+	}
+
+	&__btn {
+	}
+
+	&__btn-prev {
+	}
+
+	&__btn-next {
+	}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.gallery-slide {
+	width: 588px;
+	box-sizing: border-box;
+
+	@include media($tablet) {
+		width: adapt(588, 260, $finishBreakpoint, $tablet);
+	}
+	&__wrapper {
+		display: inline-flex;
+		box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+		padding-bottom: 60%;
+		width: 100%;
+		overflow: hidden;
+		img {
+			transition: all 0.3s;
+		}
+		@include hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+.swiper-btn {
+	&__prev {
+	}
+
+	&__next {
+	}
+}

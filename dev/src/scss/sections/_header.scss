@@ -1,0 +1,193 @@
+@use "@/scss/tools" as *;
+
+.header {
+	padding-block: adapt(12, 4);
+	color: var(--color-white);
+	background: var(--color-gray-op-2);
+
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 55;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	@include media($tablet, min) {
+		backdrop-filter: blur(20px);
+		background: var(--color-gray-op);
+	}
+	@include media($tablet) {
+		@include mobile-header();
+	}
+	.admin-bar & {
+		top: var(--wp-admin-bar-height);
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: adapt(39, 24, $tablet);
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		position: relative;
+		z-index: 3;
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		width: 100%;
+
+		@include media($tablet) {
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+
+	&__contact-box {
+		padding-bottom: 12px;
+		border-bottom: 1px solid var(--color-gray-2);
+		transition: all 0.3s;
+
+		@include media($tablet, min) {
+			.scrolled & {
+				height: 0;
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+			}
+		}
+
+		@include media($mobile-sm) {
+			align-items: start !important;
+		}
+
+		@include media($tablet) {
+			border: none;
+			@include mobile-menu(#{rgba(#000, 0.8)}, $active: ".open-contacts-box", $list: ".none") {
+				backdrop-filter: blur(20px);
+				align-items: center;
+				gap: 24px;
+				margin-top: 0;
+				padding-block: 44px;
+				padding-top: calc(var(--header-height) + 44px);
+				height: 100dvh;
+				.admin-bar & {
+					padding-top: calc((var(--header-height) + 44px) + var(--wp-admin--admin-bar--height));
+				}
+				.contacts-box {
+					flex-direction: column;
+					gap: 24px !important;
+				}
+
+				.contacts-box__item {
+					flex: 1 !important;
+					max-width: 100% !important;
+				}
+
+				.contacts-box__list {
+					flex-direction: column;
+				}
+
+				.btn {
+					flex-shrink: 0;
+				}
+			}
+		}
+
+		.contacts-box {
+			gap: 6px;
+
+			@include media($mobile-sm) {
+				align-items: start;
+			}
+		}
+		.contacts-box__item {
+			flex: 1;
+		}
+		.contacts-box__item:first-of-type {
+			flex: 0 1 510px;
+			max-width: 510px;
+		}
+		.contacts-box__list {
+			@include media($mobile-sm) {
+				align-items: start;
+			}
+		}
+	}
+
+	&__btn {
+	}
+
+	&__menu {
+	}
+
+	&__phone-btn {
+		position: relative;
+		z-index: 3;
+	}
+
+	&__burger-btn {
+		position: relative;
+		z-index: 3;
+	}
+}
+.container {
+}
+.logo {
+	a {
+		display: inline-flex;
+		transition: all 0.3s;
+		.scrolled & {
+			opacity: 0;
+			height: 0;
+			visibility: hidden;
+			position: absolute;
+		}
+		@include hover {
+			opacity: 0.7;
+		}
+
+		@include media($tablet) {
+			opacity: 0;
+			height: 0;
+			visibility: hidden;
+			position: absolute;
+		}
+
+		&.logo__small {
+			opacity: 0;
+			height: 0;
+			visibility: hidden;
+			position: absolute;
+			.scrolled & {
+				position: static;
+				opacity: 1;
+				height: auto;
+				visibility: visible;
+			}
+
+			@include media($tablet) {
+				position: static;
+				opacity: 1;
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}
+.btn {
+}
+.header-menu {
+}
+.phone-btn {
+}
+.visible-tablet {
+}
+.burger-btn {
+}
+.main {
+}

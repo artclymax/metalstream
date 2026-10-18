@@ -1,0 +1,41 @@
+@use "@/scss/tools" as *;
+
+.icon {
+	--width: 26px;
+	--height: var(--width);
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+
+	&::before {
+		content: "";
+		flex-shrink: 0;
+		//margin-top: 6px;
+		width: var(--width);
+		height: var(--height);
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: var(--icon-bg);
+	}
+	&--light {
+		&::before {
+			background-image: url("../../../public/images/icons/light.svg");
+		}
+	}
+	&--phone-2 {
+		&::before {
+			background-image: url("../../../public/images/icons/phone-2.svg");
+		}
+	}
+	&--address {
+		&::before {
+			background-image: url("../../../public/images/icons/address.svg");
+		}
+	}
+	&--email {
+		&::before {
+			background-image: url("../../../public/images/icons/email.svg");
+		}
+	}
+}

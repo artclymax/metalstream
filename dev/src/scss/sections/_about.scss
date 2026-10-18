@@ -1,0 +1,24 @@
+@use "@/scss/tools" as *;
+
+.about {
+	&__container {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+
+		@include media($mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__descr-box {
+		flex: 1;
+		
+	}
+
+	&__image-box {
+		flex: 1;
+		min-height: adapt(430, 240);
+		width: 100%;
+	}
+}

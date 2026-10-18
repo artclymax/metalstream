@@ -1,0 +1,40 @@
+@use "@/scss/tools" as *;
+
+.contacts-section {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px 24px;
+
+		@include media($tablet) {
+			flex-direction: column;
+		}
+	}
+	&__contacts-box {
+		flex: 0 1 300px;
+		gap: adapt(35, 24);
+
+		@include media($tablet) {
+			flex: 1;
+		}
+		@include media($mobile-sm) {
+			flex-direction: column;
+		}
+
+		.contacts-box__item {
+			flex: 1;
+		}
+		.contacts-box__list {
+			flex-direction: column;
+			align-items: start;
+			gap: 16px;
+		}
+	}
+	&__map {
+		flex: 0 1 800px;
+
+		@include media($tablet) {
+			flex: 1;
+		}
+	}
+}

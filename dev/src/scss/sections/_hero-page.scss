@@ -1,0 +1,20 @@
+@use "@/scss/tools" as *;
+
+.hero-page {
+	margin-top: var(--header-height);
+	position: relative;
+	padding-bottom: adapt(56, 24);
+	padding-top: adapt(35, 14);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	&__title {
+		text-align: center;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+}

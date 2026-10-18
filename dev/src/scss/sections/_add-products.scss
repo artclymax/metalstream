@@ -1,0 +1,65 @@
+@use "../tools" as *;
+
+.add-products {
+	background-color: var(--color-white);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include overlay(var(--color-white), 0.92);
+	overflow: hidden;
+	color: var(--color-dark);
+	padding-block: 56px;
+
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		gap: 24px;
+		justify-content: space-between;
+
+		@include media($mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		flex: 0 1 534px;
+		text-wrap: balance;
+
+		@include media($mobile) {
+			flex: 1;
+		}
+	}
+
+	&__descr {
+		flex: 0 1 486px;
+
+		@include media($mobile) {
+			flex: 1;
+		}
+
+		ul {
+			@include reset;
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		li {
+			display: flex;
+			gap: 8px;
+		
+			&::before {
+				content: '';
+				@include square(20px);
+				background-image: url('../../../public/images/icons/check-mark.svg');
+				background-position: center; /* x y */
+				background-size: cover;
+				background-repeat: no-repeat;
+				
+			}
+		}
+
+	}
+}

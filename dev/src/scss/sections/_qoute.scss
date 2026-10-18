@@ -1,0 +1,44 @@
+@use "../tools" as *;
+
+.qoute {
+	background-color: #3c3c3c;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include overlay(#3c3c3c, 0.92);
+	overflow: hidden;
+	color: var(--color-white);
+	padding-block: 56px;
+
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		gap: adapt(60, 16);
+		justify-content: space-between;
+
+		@include media($mobile) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+
+	&__title {
+		flex: 0 1 adapt(340, 240, $mobile);
+		@include media($mobile) {
+			flex: 1;
+		}
+		@include media($mobile-sm) {
+			font-size: 24px;
+		}
+	}
+
+	&__descr {
+		@include reset;
+		flex: 1;
+
+		@include media($mobile-sm) {
+			font-size: 18px;
+		}
+	}
+}

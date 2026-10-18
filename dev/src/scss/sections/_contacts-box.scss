@@ -1,0 +1,59 @@
+@use "@/scss/tools" as *;
+
+.contacts-box {
+	@include reset;
+	list-style-type: none;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+
+	&__item {
+	}
+
+	&__title {
+		@include reset;
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	&__list {
+		@include reset;
+		list-style-type: none;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__list-item {
+	}
+}
+.contact-item {
+	--width: 20px;
+	gap: 8px;
+	font-weight: 600;
+
+	&__text {
+		@include reset;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		transition: all 0.3s;
+		
+		@include hover {
+			color: var(--color-accent-dark);
+		}
+	}
+
+	&__link-icon {
+		@include hover {
+			opacity: 0.6;
+		}
+	}
+}
+.icon {
+}

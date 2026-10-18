@@ -1,0 +1,46 @@
+@use "../tools" as *;
+@use "../components/typography" as *;
+
+.directions {
+	@include overlay(var(--color-white), 0.9);
+	overflow: hidden;
+	
+	&__container {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: adapt(56, 24);
+		}
+	}
+
+	&__list {
+		--min: 280px;
+		gap: 24px;
+		@include counter(false, ".directions-item", ".");
+	}
+
+	&__item {
+	}
+}
+
+.directions-item {
+	padding: adapt(20, 12);
+	background: var(--color-white);
+	border-radius: 8px;
+	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-height: 100px;
+
+	&::before {
+		@extend .title-2;
+		color: var(--color-accent);
+	}
+	&__title {
+		font-size: 1rem;
+	}
+}

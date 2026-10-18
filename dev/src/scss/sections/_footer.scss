@@ -1,0 +1,171 @@
+@use "@/scss/tools" as *;
+
+.footer {
+	background: var(--color-dark-3);
+	color: var(--color-white);
+	padding-block: 56px;
+
+	&__container {
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+		flex-wrap: wrap;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			padding-bottom: 32px;
+			border-bottom: 1px solid var(--color-gray-light);
+		}
+
+		@include media($mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__info {
+		flex-shrink: 0;
+		font-size: 14px;
+
+		@include media($mobile) {
+			display: flex;
+			gap: 18px;
+			align-items: flex-end;
+		}
+	}
+
+	&__logo {
+		flex-shrink: 0;
+
+		a {
+			opacity: 1;
+			height: 100%;
+			visibility: visible;
+			position: static;
+		}
+
+		@include media($mobile) {
+			height: 100px;
+		}
+	}
+
+	&__company {
+		@include reset;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__unp {
+		@include reset;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__copy {
+		@include reset;
+		display: block;
+		font-size: inherit;
+	}
+
+	&__nav {
+		flex: 0 1 200px;
+		@include media($mobile) {
+			flex: 1;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		color: var(--color-accent);
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__contacts {
+		flex: 0 0 640px;
+		@include media($mobile) {
+			flex: 1;
+			width: 100%;
+		}
+	}
+
+	&__contacts-box {
+		gap: adapt(35, 24);
+		.contacts-box__item {
+			flex: 1;
+			&:first-of-type {
+				//flex: 0 1 auto;
+			}
+		}
+		.contacts-box__list {
+			flex-direction: column;
+			align-items: start;
+			gap: 16px;
+		}
+	}
+
+	&__bottom {
+	}
+
+	&__links {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		font-size: 14px;
+	}
+
+	&__links-item {
+	}
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		transition: all 0.3s;
+
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+}
+.container {
+}
+
+.footer-menu {
+	&__list {
+		@include reset;
+		list-style-type: none;
+		display: grid;
+		gap: 16px;
+		@include media($mobile) {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		}
+
+		li {
+			@include media($mobile) {
+				flex: 1;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: var(--color-white);
+			font-weight: 600;
+			transition: all 0.3s;
+
+			@include hover {
+				color: var(--color-accent);
+			}
+		}
+	}
+}

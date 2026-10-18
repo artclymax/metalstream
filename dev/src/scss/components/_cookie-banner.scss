@@ -1,0 +1,74 @@
+@use "@/scss/tools" as *;
+
+.cookie-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: var(--color-light);
+	color: inherit;
+	z-index: 9999;
+	border-block: 1px solid var(--color-gray-light);
+	transition: all 0.3s;
+	color: var(--color-dark);
+
+	&.hide {
+		display: none;
+	}
+
+	&__container {
+		padding-block: adapt(20, 10);
+		padding-inline:16px;
+		display: flex;
+		gap: adapt(76, 16);
+		justify-content: space-between;
+		align-items: center;
+
+		@include media($tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__content {
+		@include reset;
+		font-family: var(--font-family-title);
+		font-weight: 400;
+		font-size: 14px;
+		flex: 1;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: all 0.3s;
+			color: var(--color-accent);
+			text-shadow: 0 0 1px #1c1c1c;
+			@include hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: adapt(20, 16);
+
+		@include media($mobile-sm) {
+			flex: 1 1 100%;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+	}
+
+	&__btn.btn {
+		max-width: 200px;
+		@include media($mobile-sm) {
+			flex: 1;
+			width: 100%;
+			line-height: 110%;
+			max-width: 100%;
+		}
+	}
+	&__btn.btn--stroke {
+		color: var(--color-dark);
+	}
+}
